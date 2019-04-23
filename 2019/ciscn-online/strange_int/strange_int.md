@@ -1,4 +1,4 @@
-# strange_int by: 王剑儒
+# strange_int
 
 这题是一个裸机程序。前面512字节loder被BIOS读进内存，loader把后面的部分也读进内存，设置好IDT/GDT后，执行长跳转进入保护模式。观察GDT表的值，发现cs和ds都指向了0x00000000，所以可以把image.bin的头512字节切掉，拖进IDA分析。
 
